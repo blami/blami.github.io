@@ -1,0 +1,26 @@
+title: blami.net
+email: your-email@example.com
+description: >-
+    Blami's personal website.
+
+baseurl: ""
+url: "http://blami.net"
+
+twitter_username: blami
+github_username: blami
+
+google_analytics_id: UA-25245375-7
+
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+exclude:
+   - Makefile
+   - Gemfile
+   - Gemfile.lock
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
