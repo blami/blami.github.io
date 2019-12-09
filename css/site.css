@@ -1,4 +1,35 @@
+/* Bootstrap */
+@media (min-width: 992px) {
+  .container.max-960 {
+    max-width: 960px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container.max-960 {
+    max-width: 960px !important;
+  }
+}
+
+.container.max-960 {
+  max-width: 960px !important;
+}
+
+
 body {
-  font-family: GoMonoRegular, Menlo, Monaco, monospace, serif;
-  font-size: 92px;
+  background: #fbf1c7;
+  font-family: Go, sans-serif;
+  font-size: 1em;
+}
+
+.bg1 {
+  background: #fbf1c7;
+}
+
+.bg2 {
+  background: #ebdbb2;
+}
+
+.header .avatar {
+  width: 128px;
 }

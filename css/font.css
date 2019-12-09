@@ -1,24 +1,54 @@
 @font-face {
-  font-family: 'GoMonoBold';
-  src: url('/css/GoMonoBold.ttf') format('truetype');
+  font-family: 'Go';
+  src: url('/css/Go-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: 'GoMonoBoldItalic';
-  src: url('/css/GoMonoBoldItalic.ttf') format('truetype');
+  font-family: 'Go';
+  src: url('/css/Go-Bold-Italic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
 }
 @font-face {
-  font-family: 'GoMonoItalic';
-  src: url('/css/GoMonoItalic.ttf') format('truetype');
+  font-family: 'Go';
+  src: url('/css/Go-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
-  font-family: 'GoMonoRegular';
-  src: url('/css/GoMonoRegular.ttf') format('truetype');
+  font-family: 'Go';
+  src: url('/css/Go-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Go';
+  src: url('/css/Go-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Go-Mono';
+  src: url('/css/Go-Mono-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Go-Mono';
+  src: url('/css/Go-Mono-Bold-Italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Go-Mono';
+  src: url('/css/Go-Mono-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Go-Mono';
+  src: url('/css/Go-Mono.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
