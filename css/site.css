@@ -4,32 +4,160 @@
     max-width: 960px !important;
   }
 }
-
 @media (min-width: 1200px) {
   .container.max-960 {
     max-width: 960px !important;
   }
 }
-
 .container.max-960 {
   max-width: 960px !important;
 }
 
+/* Assets */
+.avatar {
+  mask: url(avatar.svg) no-repeat center; -webkit-mask: url(avatar.svg) no-repeat center;
+}
+.bg {
+  background: #fbf1c7;
+}
 
+/* General */
 body {
-  background: #fbf1c7;
-  font-family: Go, sans-serif;
-  font-size: 1em;
+  font-family: "Roboto", "Arial", sans-serif;
+  /* font-size: 0.9375rem; */
+  min-width: 320px;
+  /* Stupid IE */
+  width: auto !important;
+  width: 300px;
 }
 
-.bg1 {
-  background: #fbf1c7;
+h1, h2, h3, h4, h5, h6, .site-header {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+}
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 1rem; }
+.text-monospace, code, kbd, samp, var, tt {
+  font-family: "Roboto Mono", monospace;
 }
 
-.bg2 {
-  background: #ebdbb2;
+a.normal, a.normal:focus, a.normal:hover, a.normal:visited {
+  text-decoration: unset;
+  color: unset;
 }
 
+/* Header */
+.header .site-header {
+  /* To avoid whole-width clickable banner with name */
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
 .header .avatar {
-  width: 128px;
+  margin: 0 auto;
+  width: 192px;
+  height: 192px;
+  background-color: #000;
+  /* To align avatar with text, lame */
+  position: relative;
+  left: 11px;
+}
+.header .site-author {
+  font-size: 1.75rem;
+}
+.header .site-tagline {
+  font-size: 1rem;
+  margin-top: -0.3rem;
+}
+
+/* Navbar */
+.navbar {
+  padding: 0.5rem 0 0 0 !important;
+}
+.navbar .mini-header {
+  display: none;
+}
+.condensed .mini-header {
+  display: flex;
+  height: 32px;
+  line-height: 32px;
+  vertical-align: middle;
+}
+.mini-header .avatar {
+  position: relative;
+  float: left;
+  width: 32px;
+  height: 32px;
+  background-color: #000;
+}
+/* Smaller site tagline on mobile */
+@media (max-width: 768px) {
+  .mini-header .site-tagline {
+    font-size: 0.75rem;
+    padding-left: 0.25rem;
+  }
+}
+/* Don't pad first link when navbar is not collapsed */
+@media (min-width: 576px) {
+  .navbar-expand-sm .navbar-nav .nav-item:first-child .nav-link {
+    padding-left: 0;
+  }
+  .condensed .navbar-expand-sm .navbar-nav .nav-item:first-child .nav-link {
+    padding-left: 0.5rem;
+  }
+}
+/* Make collapsed navbar different color */
+@media (max-width: 576px) {
+  .condensed .mini-header {
+    padding-left: 15px;
+    margin-bottom: 10px;
+  }
+  .navbar-collapse {
+    padding: 0 15px;
+    background: #ebdbb2;
+  }
+}
+
+
+/* Hamburger */
+.hamburger-navbar {
+  z-index: 1021;
+}
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+  margin: 0;
+  padding: 0;
+}
+.hamburger {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.navbar-toggler .hamburger-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='butt' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Content */
+.content {
+  padding-top: 1.5rem;
+}
+
+/* Footer */
+.footer {
+  padding-top: 1.5rem;
+  font-size: 0.8rem;
+}
+.footer p {
+  margin-bottom: 0.1rem;
+}
+.footer p.copyright,
+.footer p.madewith {
+  margin-top: 0.9rem;
 }
