@@ -1,4 +1,6 @@
 title: blami.net
+tagline: Nobody notices when things go right. #Reliability Through The Roof
+author: Ondrej Balaz
 email: your-email@example.com
 description: >-
     Blami's personal website.
@@ -11,9 +13,12 @@ github_username: blami
 
 google_analytics_id: UA-25245375-7
 
+permalink: /blog/:year/:month/:day/:title:output_ext
+
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 exclude:
    - Makefile
