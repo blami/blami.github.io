@@ -1,0 +1,13 @@
+---
+layout: default
+condensed: true
+comments: true
+---
+
+{% include article.html summary=false %}
+
+{% comment %}
+{% if page.comments %}
+{% include disqus.html %}
+{% endif %}
+{% endcomment %}

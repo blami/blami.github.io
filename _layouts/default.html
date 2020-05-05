@@ -1,17 +1,18 @@
+---
+---
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Minimized Bootstrap 4 -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/fa.min.css" rel="stylesheet">
-    <link href="css/font.css" rel="stylesheet">
-    <link href="css/site.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/fa.min.css" rel="stylesheet">
+    <link href="/css/font.css" rel="stylesheet">
+    <link href="/css/site.css" rel="stylesheet">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="shortcut icon" href="/favicon.png?" type="image/png">
-    <link rel="icon" href="/favicon.png?" type="image/png">
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
 
     <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
     <meta name="description" content="{{ site.description }}">
@@ -31,50 +32,75 @@
     </script>
     {% endif %}
   </head>
-  <body>
+  <body class="bg {% if page.condensed or layout.condensed %}condensed{% endif %}">
 
+    <div class="hamburger-navbar sticky-top navbar-expand-sm">
+      <button class="hamburger navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbar1">
+        <span class="hamburger-icon"></span>
+      </button>
+    </div>
+
+    {% if page.condensed != true and layout.condensed != true %}
     <!-- Header -->
     <div class="header">
       <div class="container max-960 py-4">
         <div class="row">
-          <div class="col-12">
-            <img src="images/avatar.png"
-                 class="avatar mx-auto d-block py-4"
-                 title="Me. Pixelated."/>
-            <div class="text-center about">
-
-              <!--
-              <div>Ondrej Balaz</div>
-              <div>...</div>
-              -->
-
-              <a href="https://github.com/blami"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/ondrejbalaz/"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/blami"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.instagram.com/blami85/"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.meetup.com/members/198269532/"><i class="fab fa-meetup"></i></a>
-              <a href="https://www.last.fm/user/blami"><i class="fab fa-lastfm"></i></a>
-
+          <div class="col-12 text-center about">
+            <div class="site-header">
+              <a href="/" class="normal">
+                <div class="avatar" title="Me. Pixelated." alt="Me. Pixelated."></div>
+                <div class="site-author">{{ site.author }}</div>
+                <div class="site-tagline">{{ site.tagline }}</div>
+              </a>
             </div>
-          </div>
+            <div class="site-social-links">
+              <a href="https://github.com/blami" title="My Github"><i class="fab fa-github"></i></a>
+              <a href="https://twitter.com/blami" title="My Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/blami85/" title="My Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/ondrejbalaz/" title="My Linked.in"><i class="fab fa-linkedin"></i></a>
+              <a href="https://stackoverflow.com/users/2668241/blami" title="My stackoverflow"><i class="fab fa-stack-overflow"></i></a>
+              <a href="https://www.meetup.com/members/198269532/" title="My Meetup.com profile"><i class="fab fa-meetup"></i></a>
+              <a href="https://steamcommunity.com/id/blami" title="My Steam profile"><i class="fab fa-steam"></i></a>
+              <a href="https://www.last.fm/user/blami" title="My Last.fm profile"><i class="fab fa-lastfm"></i></a>
+            </div>
+          </div><!-- /about -->
         </div>
       </div>
-    </div>
+    </div><!-- /header -->
+    {% endif %}
 
-    <!-- Navbar 
-    <nav class="navbar navbar-expand-sm navbar-light sticky-top bg1">
+    {% if page.condensed != true and layout.condensed != true %}
+    <!-- NOTE: Bootstrap doesn't require this, it's to show mini-header. -->
+    <span class="position-absolute navbar-trigger"></span>
+    {% endif %}
+    <nav class="navbar navbar-expand-sm navbar-light sticky-top bg">
       <div class="container max-960">
-        Home
+
+        <div class="mini-header site-header">
+          <a href="/" class="normal">
+            <div class="avatar"></div>
+            <span class="site-tagline">{{ site.tagline }}</span>
+          </a>
+        </div>
+        <div></div><!-- navbar pusher -->
+
+        {% comment %}
+        <!-- This is disabled as I moved hamburger out of <nav>.
         <button class="navbar-toggler navbar-toggler-right"
                 type="button"
                 data-toggle="collapse"
                 data-target="#navbar1">
-          <span class="navbar-toggler-icon">
+          <span class="hamburger-icon"></span>
         </button>
+        -->
+        {% endcomment %}
         <div class="collapse navbar-collapse" id="navbar1">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">about</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog">blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about">about</a></li>
           </ul>
         </div>
       </div>
@@ -83,17 +109,31 @@
     <div class="content container max-960">
       <div class="row">
         <div class="col-12">
+          {{ content }}
         </div>
       </div>
+    </div><!--  /content -->
+
+    <div class="footer">
+      <div class="container max-960 py-4" >
+        <hr></hr>
+        <p>The opinions expressed herein are my own personal opinions and do not represent my employer's view in any way.</p>
+        <p>All code examples are licensed under MIT License unless stated otherwise.</p>
+        <p class="d-none d-md-block">I'm self-taught English speaker, I've learned through books and video games. I'm bad speaker and bad writer (even in my native language). Please <strike>bare</strike> bear with me.</p>
+
+        <p class="copyright">Copyright Ondrej Balaz © 2004-{{ 'now' | date: "%Y" }}</p>
+        <p class="madewith d-none d-md-block">
+          Made with <a href="https://jekyllrb.com"><i class="fab fa-markdown"></i> Markdown</a> and <a href="https://jekyllrb.com"><i class="fas fa-vial"></i> Jekyll</a>
+          hosted on <a href="https://github.com"><i class="fab fa-github"></i> GitHub</a>
+        </p>
+      </div>
     </div>
-    -->
 
-    <footer class="page-footer">
-       <div class="container max-960">
-       </div>
-    </footer>
-
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js"></script>
+    {% if page.comments %}
+    <script id="dsq-count-scr" src="//blami.disqus.com/count.js" async></script>
+    {% endif %}
   </body>
 </html>
