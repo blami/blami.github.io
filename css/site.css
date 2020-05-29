@@ -44,10 +44,31 @@ h6 { font-size: 1rem; }
 .text-monospace, code, kbd, samp, var, tt {
   font-family: "Roboto Mono", monospace;
 }
-
 a.normal, a.normal:focus, a.normal:hover, a.normal:visited {
   text-decoration: unset;
   color: unset;
+}
+
+/* Hamburger Button */
+.menu-navbar {
+  z-index: 1021;
+}
+.menu-navbar .navbar-toggler {
+  border: none;
+  background: transparent !important;
+  margin: 0;
+  padding: 0;
+}
+.menu-navbar button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.menu-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='butt' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Header */
@@ -72,6 +93,16 @@ a.normal, a.normal:focus, a.normal:hover, a.normal:visited {
   font-size: 1rem;
   margin-top: -0.3rem;
 }
+@media (max-width: 576px) {
+  /* Smaller tagline on mobile */
+  .header .site-tagline {
+    font-size: 0.9rem;
+  }
+  /* Disable bottom padding of header container (menu is hidden) */
+  .header > .container {
+    padding-bottom: 0 !important;
+  }
+}
 
 /* Navbar */
 .navbar {
@@ -93,24 +124,13 @@ a.normal, a.normal:focus, a.normal:hover, a.normal:visited {
   height: 32px;
   background-color: #000;
 }
-/* Smaller site tagline on mobile */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+  /* Smaller tagline on mobile */
   .mini-header .site-tagline {
     font-size: 0.75rem;
     padding-left: 0.25rem;
   }
-}
-/* Don't pad first link when navbar is not collapsed */
-@media (min-width: 576px) {
-  .navbar-expand-sm .navbar-nav .nav-item:first-child .nav-link {
-    padding-left: 0;
-  }
-  .condensed .navbar-expand-sm .navbar-nav .nav-item:first-child .nav-link {
-    padding-left: 0.5rem;
-  }
-}
-/* Make collapsed navbar different color */
-@media (max-width: 576px) {
+  /* Collapsed navbar different color on mobile */
   .condensed .mini-header {
     padding-left: 15px;
     margin-bottom: 10px;
@@ -120,28 +140,13 @@ a.normal, a.normal:focus, a.normal:hover, a.normal:visited {
     background: #ebdbb2;
   }
 }
-
-
-/* Hamburger */
-.hamburger-navbar {
-  z-index: 1021;
-}
-.navbar-toggler {
-  border: none;
-  background: transparent !important;
-  margin: 0;
-  padding: 0;
-}
-.hamburger {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-}
-.navbar-toggler .hamburger-icon {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='butt' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+@media (min-width: 576px) {
+  .navbar-expand-sm .navbar-nav .nav-item:first-child .nav-link {
+    padding-left: 0;
+  }
+  .condensed .navbar-expand-sm .navbar-nav .nav-item:first-child .nav-link {
+    padding-left: 0.5rem;
+  }
 }
 
 /* Content */
