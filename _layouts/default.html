@@ -34,12 +34,12 @@
   </head>
   <body class="bg {% if page.condensed or layout.condensed %}condensed{% endif %}">
 
-    <div class="hamburger-navbar sticky-top navbar-expand-sm">
-      <button class="hamburger navbar-toggler"
+    <div class="menu-navbar sticky-top navbar-expand-sm">
+      <button class="navbar-toggler"
               type="button"
               data-toggle="collapse"
               data-target="#navbar1">
-        <span class="hamburger-icon"></span>
+        <span class="menu-icon"></span>
       </button>
     </div>
 
@@ -99,7 +99,9 @@
         {% endcomment %}
         <div class="collapse navbar-collapse" id="navbar1">
           <ul class="navbar-nav">
+            {% comment %}
             <li class="nav-item"><a class="nav-link" href="/blog">blog</a></li>
+            {% endcomment %}
             <li class="nav-item"><a class="nav-link" href="/about">about</a></li>
           </ul>
         </div>

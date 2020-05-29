@@ -2,10 +2,30 @@
 layout: default
 ---
 
-<h2>Hi!</h2>
+<h1>Hi!</h1>
+<p>
+I'm Ondrej Balaz. I live in Tokyo.
+</p>
 
+<h3>Digital Identity</h3>
+<ul class="fa-ul">
+  <li>
+    <span class="fa-li"><i class="fas fa-key"></i></span>
+    <a href="/id_blami_rsa.pub">SSH public key</a>
+    SHA256: <code>NeZ8eoTgzGslUvCM9vJi5zT30bu+VtcnxzsHrhCENh4</code>
+  </li>
+  <li>
+    <span class="fa-li"><i class="fas fa-key"></i></span>
+    <a href="/pubkey.asc">GnuPG public key</a>
+    fingerprint: <code>7AA2 9066 00CE 4591 2A2F  61F3 D441 485D 1FCD 8C25</code>
+  </li>
+  <li>
+    <span class="fa-li"><i class="fas fa-hand-spock"></i></span>
+    <a href="/geekcode.asc">Geek code</a>
+  </li>
+</ul>
 
-
+{% comment %}
 <h2>Latest Blog Posts</h2>
 <ul>
 {% for post in site.posts limit:3 %}
@@ -15,3 +35,4 @@ layout: default
   </li>
 {% endfor %}
 </ul>
+{% endcomment %}
