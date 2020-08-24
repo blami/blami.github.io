@@ -19,7 +19,7 @@
 }
 .fa-li {
   left: unset !important;
-  padding-right: 0.25em;
+  padding-right: 0.25rem;
   text-align: unset;
   position: unset;
 }
@@ -203,4 +203,10 @@ a.nav-link {
 }
 .footer p.madewith {
   margin-top: 0.9rem;
+}
+
+/* Page: Index */
+.index > div:nth-child(2) {
+  border-left: dotted #5b5b5b;
+  border-right: dotted #5b5b5b;
 }

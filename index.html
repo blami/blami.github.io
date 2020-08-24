@@ -19,16 +19,42 @@ layout: default
 
   <!-- Digital identity -->
   <div class="col-md col-12">
+    <!-- Contact -->
+    <ul class="fa-ul">
+      <li>
+        <span class="fa-li"><i class="fas fa-envelope"></i></span>
+        <script>
+          // TODO Obfuscate somehow
+          user = 'blami';
+          site = 'blami.net';
+          document.write('<a href=\"mailto:' 
+                      + user + '@' + site 
+                      + '\">' + user + '@' + site + '</a>');
+        </script>
+      </li>
+      <li>
+        <span class="fa-li"><i class="fab fa-telegram-plane"></i></span>
+        <a href="https://t.me/blami85">blami85</a>
+      </li>
+      <li>
+        <span class="fa-li"><i class="fab fa-slack"></i></span>
+        <a href="https://t.me/blami85">blami</a> [at] #gophers
+      </li>
+    </ul>
+
     <ul class="fa-ul">
       <li>
         <span class="fa-li"><i class="fas fa-key"></i></span>
         <a href="/id_blami_rsa.pub">SSH public key</a>
+        <code>sha256</code>
 
         <!--SHA256: <code>NeZ8eoTgzGslUvCM9vJi5zT30bu+VtcnxzsHrhCENh4</code>-->
       </li>
       <li>
         <span class="fa-li"><i class="fas fa-key"></i></span>
         <a href="/pubkey.asc">GnuPG public key</a>
+        <code>fingerprint</code>
+
         <!--fingerprint: <code>7AA2 9066 00CE 4591 2A2F  61F3 D441 485D 1FCD
         8C25</code>-->
       </li>
@@ -48,7 +74,7 @@ layout: default
       </li>
     {% endfor %}
     {% if site.posts == empty %}
-    There are no posts yet.
+    There are no blog posts yet :(
     {% endif %}
     </ul>
   </div>
