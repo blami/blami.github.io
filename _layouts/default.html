@@ -10,6 +10,7 @@
     <link href="/css/fa.min.css" rel="stylesheet">
     <link href="/css/font.css" rel="stylesheet">
     <link href="/css/site.css" rel="stylesheet">
+    <link href="/css/themes.css" rel="stylesheet">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
@@ -51,7 +52,9 @@
           <div class="col-12 text-center about">
             <div class="site-header">
               <a href="/" class="normal">
-                <div class="avatar" title="Me. Pixelated." alt="Me. Pixelated."></div>
+                <div class="avatar-bg">
+                  <div class="avatar" title="Me. Pixelated."></div>
+                </div>
                 <div class="site-author">{{ site.author }}</div>
                 <div class="site-tagline">{{ site.tagline }}</div>
               </a>
@@ -60,6 +63,7 @@
               <a href="https://github.com/blami" title="My Github"><i class="fab fa-github"></i></a>
               <a href="https://twitter.com/blami" title="My Twitter"><i class="fab fa-twitter"></i></a>
               <a href="https://www.instagram.com/blami85/" title="My Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitch.tv/blami" title="My Twitch Channel"><i class="fab fa-twitch"></i></a>
               <a href="https://www.linkedin.com/in/ondrejbalaz/" title="My Linked.in"><i class="fab fa-linkedin"></i></a>
               <a href="https://stackoverflow.com/users/2668241/blami" title="My stackoverflow"><i class="fab fa-stack-overflow"></i></a>
               <a href="https://www.meetup.com/members/198269532/" title="My Meetup.com profile"><i class="fab fa-meetup"></i></a>
@@ -81,8 +85,10 @@
 
         <div class="mini-header site-header">
           <a href="/" class="normal">
-            <div class="avatar"></div>
-            <span class="site-tagline">{{ site.tagline }}</span>
+            <div class="avatar-bg">
+              <div class="avatar" title="Me. Pixelated."></div>
+            </div>
+            <span class="site-author pl-1 pr-4" title="{{ site.tagline }}">{{ site.author }}</span>
           </a>
         </div>
         <div></div><!-- navbar pusher -->
@@ -99,10 +105,16 @@
         {% endcomment %}
         <div class="collapse navbar-collapse" id="navbar1">
           <ul class="navbar-nav">
-            {% comment %}
-            <li class="nav-item"><a class="nav-link" href="/blog">blog</a></li>
-            {% endcomment %}
-            <li class="nav-item"><a class="nav-link" href="/about">about</a></li>
+            {% assign nodes = site.pages | sort:"navpos" %}
+            {% for node in nodes %}
+              {% if node.nav %}
+                {% if page.url contains node.url %}
+                  <li class="nav-item"><a class="nav-link active" href="{{ node.url }}">{{ node.nav }}</a></li>
+                {% else %}
+                  <li class="nav-item"><a class="nav-link" href="{{ node.url }}">{{ node.nav }}</a></li>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
           </ul>
         </div>
       </div>
@@ -117,13 +129,12 @@
     </div><!--  /content -->
 
     <div class="footer">
-      <div class="container max-960 py-4" >
+      <div class="container max-960 py-4">
         <hr></hr>
-        <p>The opinions expressed herein are my own personal opinions and do not represent my employer's view in any way.</p>
-        <p>All code examples are licensed under MIT License unless stated otherwise.</p>
-        <p class="d-none d-md-block">I'm self-taught English speaker, I've learned through books and video games. I'm bad speaker and bad writer (even in my native language). Please <strike>bare</strike> bear with me.</p>
-
-        <p class="copyright">Copyright Ondrej Balaz © 2004-{{ 'now' | date: "%Y" }}</p>
+        <p>
+        Copyright © Ondrej Balaz 2004-{{ 'now' | date: "%Y" }}. Published under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC by-nc-sa</a>.<br />
+        The opinions expressed herein are my own personal opinions and do not represent my employer's view in any way.
+        </p>
         <p class="madewith d-none d-md-block">
           Made with <a href="https://jekyllrb.com"><i class="fab fa-markdown"></i> Markdown</a> and <a href="https://jekyllrb.com"><i class="fas fa-vial"></i> Jekyll</a>
           hosted on <a href="https://github.com"><i class="fab fa-github"></i> GitHub</a>

@@ -1,4 +1,6 @@
 ---
+nav: about
+navpos: 3
 layout: default
 permalink: /about
 ---
