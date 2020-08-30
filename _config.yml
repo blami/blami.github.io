@@ -1,5 +1,7 @@
 title: blami.net
-email: your-email@example.com
+tagline: Nobody notices when things go right
+author: Ondrej Balaz
+email: blami@blami.net
 description: >-
     Blami's personal website.
 
@@ -8,12 +10,22 @@ url: "http://blami.net"
 
 twitter_username: blami
 github_username: blami
+instagram_username: blami85
+twitch_username: blami
+linkedin_username: ondrejbalaz
+stackoverflow_username: blami
+meetup_userid: 198269532
+steam_username: blami
+lastfm_username: blami
 
 google_analytics_id: UA-25245375-7
+
+permalink: /blog/:year/:month/:day/:title:output_ext
 
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 exclude:
    - Makefile

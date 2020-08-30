@@ -1,0 +1,10 @@
+/* Themes
+ * Site defines color themes in a way there's a theme class set on element
+ * <body> and this file loaded.
+ */
+
+.theme-dark {
+}
+
+.theme-light {
+}

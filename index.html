@@ -1,0 +1,68 @@
+---
+nav: home
+navpos: 1
+layout: default
+---
+
+<div class="row index">
+
+  <div class="col-md col-12 mb-4 mb-md-0">
+    <p>
+    Hi, I'm Ondrej and go by nick <strong>blami</strong>. I live in Japan,
+    work as a SRE and have many hobbies.
+    </p>
+
+    <p></p>
+  </div>
+
+  <!-- Digital identity -->
+  <div class="col-md col-12 mb-4 mb-md-0">
+    <!-- Contact -->
+    <ul class="fa-ul">
+      <li>
+        <span class="fa-li"><i class="fas fa-envelope"></i></span>
+        <script>
+          u = 'blami';
+          d = 'blami.net';
+          document.write('<a href=\"mailto:' + u + '@' + d 
+                      + '\">' + u + '@' + d + '</a>');
+        </script>
+      </li>
+      <li>
+        <span class="fa-li"><i class="fab fa-telegram-plane"></i></span>
+        <a href="https://t.me/blami85">blami85</a>
+      </li>
+    </ul>
+
+    <!-- Misc -->
+    <ul class="fa-ul mb-md-0">
+      <li>
+        <span class="fa-li"><i class="fas fa-key"></i></span>
+        <a href="/id_blami_rsa.pub">SSH public key</a>
+      </li>
+      <li>
+        <span class="fa-li"><i class="fas fa-key"></i></span>
+        <a href="/pubkey.asc">GnuPG public key</a>
+      </li>
+      <li>
+        <span class="fa-li"><i class="fas fa-hand-spock"></i></span>
+        <a href="/geekcode.asc">Geek code</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-md col-12">
+    <ul class="list-unstyled">
+    {% for post in site.posts limit:5 %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+    {% if site.posts == empty %}
+    There are no blog posts yet :(
+    {% endif %}
+    </ul>
+  </div>
+
+</div>
