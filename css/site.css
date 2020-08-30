@@ -121,7 +121,7 @@ a.nav-link {
 .header .site-social-links a {
   padding: 0 0.05rem;
 }
-@media (max-width: 575px) {
+@media (max-width: 576px) {
   .header .site-tagline {
     font-size: 0.9rem;
   }
@@ -156,7 +156,7 @@ a.nav-link {
   height: 32px;
   background-color: #292b2e;
 }
-@media (max-width: 575px) {
+@media (max-width: 576px) {
   /* Smaller condensed author on mobile */
   .mini-header .site-author {
     padding-left: 0.25rem;
@@ -171,7 +171,7 @@ a.nav-link {
     background: #212026;
   }
 }
-@media (min-width: 576px) {
+@media (min-width: 577px) {
   .navbar-expand-sm .navbar-nav .nav-item:first-child .nav-link {
     padding-left: 0;
   }
@@ -206,7 +206,9 @@ a.nav-link {
 }
 
 /* Page: Index */
-.index > div:nth-child(2) {
-  border-left: dotted #5b5b5b;
-  border-right: dotted #5b5b5b;
+@media (min-width: 767px) {
+  .index > div:nth-child(2) {
+    border-left: 1px dotted #5b5b5b;
+    border-right: 1px dotted #5b5b5b;
+  }
 }
