@@ -1,7 +1,8 @@
 title: blami.net
-tagline: Better late than never
+tagline: Doing simple things in the most complicated ways since 1985
 author: Ondrej Balaz
 email: blami@blami.net
+email_hash: YmxhbWlAYmxhbWkubmV0
 description: >-
     Ondrej Balaz's personal website.
 
@@ -11,14 +12,17 @@ url: "http://blami.net"
 twitter_username: blami
 github_username: blami
 instagram_username: blami85
-twitch_username: blami
+twitch_username: blami85
 linkedin_username: ondrejbalaz
-stackoverflow_username: blami
+stackoverflow_username: 2668241/blami
 meetup_userid: 198269532
 steam_username: blami
 lastfm_username: blami
 
-google_analytics_id: UA-25245375-7
+google_analytics_id: G-3MX3VJK9HE
+
+job_name: Bloomberg LP
+job_url: https://www.techatbloomberg.com/
 
 permalink: /blog/:year/:month/:day/:title:output_ext
 
@@ -28,6 +32,12 @@ plugins:
   - jekyll-paginate
 
 exclude:
+   - api/
+   - Dockerfile
+   - .dockerignore
+   - .git
+   - README.md
+   - LICENSE.md
    - Makefile
    - Gemfile
    - Gemfile.lock
