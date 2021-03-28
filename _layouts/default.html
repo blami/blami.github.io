@@ -60,15 +60,15 @@
               </a>
             </div>
             <div class="site-social-links">
-              <a href="https://github.com/blami" title="My Github"><i class="fab fa-github"></i></a>
-              <a href="https://twitter.com/blami" title="My Twitter"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.instagram.com/blami85/" title="My Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://twitch.tv/blami85" title="My Twitch Channel"><i class="fab fa-twitch"></i></a>
-              <a href="https://www.linkedin.com/in/ondrejbalaz/" title="My Linked.in"><i class="fab fa-linkedin"></i></a>
-              <a href="https://stackoverflow.com/users/2668241/blami" title="My stackoverflow"><i class="fab fa-stack-overflow"></i></a>
-              <a href="https://www.meetup.com/members/198269532/" title="My Meetup.com profile"><i class="fab fa-meetup"></i></a>
-              <a href="https://steamcommunity.com/id/blami" title="My Steam profile"><i class="fab fa-steam"></i></a>
-              <a href="https://www.last.fm/user/blami" title="My Last.fm profile"><i class="fab fa-lastfm"></i></a>
+              <a href="https://github.com/{{ site.github_username }}" title="My Github"><i class="fab fa-github"></i></a>
+              <a href="https://twitter.com/{{ site.twitter_username }}" title="My Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/{{ site.instagram_username }}/" title="My Instagram"><i class="fab fa-instagram"></i></a>
+              <a id="twitch" href="https://twitch.tv/{{ site.twitch_username }}" title="My Twitch Channel"><i class="fab fa-twitch"></i></a>
+              <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="My Linked.in"><i class="fab fa-linkedin"></i></a>
+              <a href="https://stackoverflow.com/users/{{ site.stackoverflow_username }}" title="My stackoverflow"><i class="fab fa-stack-overflow"></i></a>
+              <a href="https://www.meetup.com/members/{{ site.meetup_userid }}/" title="My Meetup.com profile"><i class="fab fa-meetup"></i></a>
+              <a href="https://steamcommunity.com/id/{{ site.steam_username }}" title="My Steam profile"><i class="fab fa-steam"></i></a>
+              <a href="https://www.last.fm/user/{{ site.lastfm_username }}" title="My Last.fm profile"><i class="fab fa-lastfm"></i></a>
             </div>
           </div><!-- /about -->
         </div>
@@ -126,7 +126,7 @@
           {{ content }}
         </div>
       </div>
-    </div><!--  /content -->
+    </div><!-- /content -->
 
     <div class="footer">
       <div class="container max-960 py-4">

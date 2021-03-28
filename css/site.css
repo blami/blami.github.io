@@ -15,14 +15,16 @@
 
 /* Font Awesome */
 .fa-ul {
-  margin-left: unset;
+  margin-left: 1.5rem;
 }
+/*
 .fa-li {
   left: unset !important;
   padding-right: .25rem;
   text-align: unset;
   position: unset;
 }
+*/
 
 /* Assets */
 .avatar {
@@ -70,6 +72,16 @@ a, a:focus, a:hover, a:visited {
 }
 a.nav-link {
   color: #a15ea7 !important;
+}
+a.nav-link:hover {
+  font-weight: bold;
+}
+
+.dark {
+  color: #727272;
+}
+.dark a, .dark a:focus, .dark a:hover, .dark a:visited {
+
 }
 
 /* Hamburger Button */
@@ -120,10 +132,34 @@ a.nav-link {
 }
 .header .site-social-links a {
   padding: 0 .05rem;
+  /* Required for on badges (dot signaling "streaming") */
+  position: relative;
 }
+@keyframes pulse {0%{opacity:1;} 50%{opacity:0.5;} 100%{opacity:1;}} /* Opera */
+.header .site-social-links a.on:after {
+  position: absolute;
+  top: 0px;
+  right: -2px;
+  content: '';
+  background-color:#f00;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+  animation: pulse normal 1.5s infinite ease-in-out;
+}
+
 @media (max-width: 576px) {
   .header .site-tagline {
     font-size: .9rem;
+    /* Make tagline nicer on mobile */
+    margin: auto;
+    max-width: 80%;
+  }
+  /* Make social links bigger and more spaced so they are easier to tap on */
+  .header .site-social-links a {
+    padding: 0 .2rem;
+    font-size: 1.2rem;
   }
   /* Disable bottom padding of header container (menu is hidden) */
   .header > .container {
