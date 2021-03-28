@@ -1,0 +1,14 @@
+secrets.yaml
+
+.gcloudignore
+.git
+.gitignore
+
+blogsvc
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
