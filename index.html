@@ -9,7 +9,7 @@ layout: default
   <div class="col-md col-12 mb-4 mb-md-0">
     <h4>Hi</h4>
     <p>
-    I am a software engineer.
+    TODO
     </p>
   </div>
 
@@ -22,6 +22,10 @@ layout: default
           document.write('<a href=\"mailto:' + atob("{{ site.email_hash }}")
                       + '\">' + atob("{{ site.email_hash }}") + '</a>');
         </script>
+      </li>
+      <li>
+        <span class="fa-li"><i class="fab fa-discord"></i></span>
+        <a href="https://discordapp.com/channels/@me/543755678448353292">blami</a>
       </li>
     </ul>
 
@@ -40,11 +44,15 @@ layout: default
         <span class="fa-li"><i class="fas fa-hand-spock"></i></span>
         <a href="/geekcode.asc.txt">Geek code</a>
       </li>
+      <li>
+        <span class="fa-li"><i class="fas fa-brain"></i></span>
+        <a href="https://www.16personalities.com/intp-personality" title="Turbulent Logician">INTP-T</a>
+      </li>
     </ul>
   </div>
 
   <div class="col-md col-12">
-    <h4>Recent Blog Posts</h4>
+    <h4>Recent Posts</h4>
     <ul class="list-unstyled">
     {% for post in site.posts limit:5 %}
       <li>

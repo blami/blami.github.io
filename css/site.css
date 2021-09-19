@@ -66,22 +66,20 @@ a.normal, a.normal:focus, a.normal:hover, a.normal:visited {
   text-decoration: unset;
   color: unset;
 }
-a, a:focus, a:hover, a:visited {
-  color: #cdcdcd;
+a, a:hover, a:focus, a:visited {
+  color: #b2b2b2;
   text-decoration: none;
+  border-bottom: 1px dashed #727272;
+}
+a:hover, a:focus {
+  color: #efefef;
+  border-bottom: 1px dashed #727272;
 }
 a.nav-link {
   color: #a15ea7 !important;
 }
 a.nav-link:hover {
   font-weight: bold;
-}
-
-.dark {
-  color: #727272;
-}
-.dark a, .dark a:focus, .dark a:hover, .dark a:visited {
-
 }
 
 /* Hamburger Button */
@@ -115,12 +113,12 @@ a.nav-link:hover {
 }
 .header .avatar-bg {
   margin: 0 auto;
-  width: 192px;
-  height: 192px;
+  width: 176px;
+  height: 176px;
 }
 .header .avatar {
-  width: 192px;
-  height: 192px;
+  width: 176px;
+  height: 176px;
   background-color: #292b2e;
 }
 .header .site-author {
@@ -134,11 +132,12 @@ a.nav-link:hover {
   padding: 0 .05rem;
   /* Required for on badges (dot signaling "streaming") */
   position: relative;
+  border: none;
 }
 @keyframes pulse {0%{opacity:1;} 50%{opacity:0.5;} 100%{opacity:1;}} /* Opera */
 .header .site-social-links a.on:after {
   position: absolute;
-  top: 0px;
+  top: -2px;
   right: -2px;
   content: '';
   background-color:#f00;
@@ -160,6 +159,7 @@ a.nav-link:hover {
   .header .site-social-links a {
     padding: 0 .2rem;
     font-size: 1.2rem;
+    border: none;
   }
   /* Disable bottom padding of header container (menu is hidden) */
   .header > .container {
@@ -173,6 +173,9 @@ a.nav-link:hover {
 }
 .navbar .mini-header {
   display: none;
+}
+.navbar a {
+  border: none;
 }
 .condensed .mini-header {
   display: flex;
@@ -233,6 +236,11 @@ a.nav-link:hover {
 }
 .footer a {
   color: #727272;
+  border-color: #5b5b5b;
+}
+.footer a:focus, .footer a:hover {
+  color: #fff;
+  border-color: #727272;
 }
 .footer p {
   margin-bottom: .1rem;
