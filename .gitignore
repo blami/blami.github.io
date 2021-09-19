@@ -1,7 +1,7 @@
 /api/secrets.yaml
 
-/_site/
-/vendor/
-/.bundle/
-/.sass-cache/
+/_site
+/vendor
+/.bundle
+/.sass-cache
 /.jekyll-metadata
