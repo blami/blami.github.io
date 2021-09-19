@@ -2,18 +2,20 @@
 This repository contains my personal website and blog https://www.blami.net/.
 It is hosted here on Github Pages and powered by Jekyll.
 
-This README is mostly collection of my notes made to get things going locally
-and solve problems.
-
 
 ## Development
+These are notes for me how to get things running locally as I don't use Jekyll
+that often.
 
 ### Setup
-To setup environment for both blogging and developing blog following is needed:
+To setup environment for both blogging and developing blog following is needed,
+assuming development on Ubuntu (or WSL with Ubuntu):
 ``` shell
-git clone
-apt install zlib1g-dev
-bundle install --path vendor/bundle
+% sudo apt install ruby-dev zlib1g-dev bundler
+% git clone git@github.com:blami/blami.github.io.git blog
+% cd blog
+% bundle install
+% bundle exec jekyll
 ```
 
 ### Templates
