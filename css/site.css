@@ -75,12 +75,6 @@ a:hover, a:focus {
   color: #efefef;
   border-bottom: 1px dashed #727272;
 }
-a.nav-link {
-  color: #a15ea7 !important;
-}
-a.nav-link:hover {
-  font-weight: bold;
-}
 
 /* Hamburger Button */
 .menu-navbar {
@@ -171,10 +165,14 @@ a.nav-link:hover {
 .navbar {
   padding: .5rem 0 0 0 !important;
 }
+.condensed .navbar {
+  padding: .5rem 0 !important;
+}
 .navbar .mini-header {
   display: none;
 }
 .navbar a {
+  color: #a15ea7 !important;
   border: none;
 }
 .condensed .mini-header {
@@ -211,11 +209,16 @@ a.nav-link:hover {
   }
 }
 @media (min-width: 577px) {
-  .navbar-expand-sm .navbar-nav .nav-item:first-child .nav-link {
-    padding-left: 0;
+  .navbar-expand-sm .navbar-nav .nav-link {
+    padding: 0;
+    margin: 0 .75rem 0 0;
   }
-  .condensed .navbar-expand-sm .navbar-nav .nav-item:first-child .nav-link {
-    padding-left: .5rem;
+  .navbar-expand-sm .navbar-nav .nav-link:hover {
+    background: #a15ea7;
+    color: #292b2e !important;
+  }
+  .navbar-expand-sm .navbar-nav .nav-item:last-child .nav-link {
+    margin-right: 0;
   }
 }
 
