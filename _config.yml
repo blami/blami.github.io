@@ -36,13 +36,10 @@ exclude:
    - api/
    - Dockerfile
    - .dockerignore
-   - .git
+   - .git/
    - README.md
    - LICENSE.md
    - Makefile
    - Gemfile
    - Gemfile.lock
-   - vendor/bundle/
-   - vendor/cache/
-   - vendor/gems/
-   - vendor/ruby/
+   - vendor/
