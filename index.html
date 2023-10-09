@@ -1,75 +1,10 @@
----
-nav: home
-navpos: 1
-layout: default
----
-
-<div class="row index">
-
-  <div class="col-md col-12 mb-4 mb-md-0">
-    <h4>Hi</h4>
-    <p>
-    I am <a href="https://en.wikipedia.org/wiki/Site_reliability_engineering" title="a site reliability engineer">an SRE</a>
-    at <a href="https://www.techatbloomberg.com/">Bloomberg LP</a>. I live in
-    Tokyo, Japan, with my wife. In my free time, I mostly write programs,
-    restore old computers and play electric bass.
-    </p><p>
-    You can read more about me <a href="/about">here</a>. If you are interested
-    in my CV it's on <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">Linked.in</a>.
-    </p>
-  </div>
-
-  <div class="col-md col-12 mb-4 mb-md-0">
-    <h4>Contact</h4>
-    <ul class="fa-ul">
-      <li>
-        <span class="fa-li"><i class="fas fa-envelope"></i></span>
-        <script>
-          document.write('<a href=\"mailto:' + atob("{{ site.email_hash }}")
-                      + '\">' + atob("{{ site.email_hash }}") + '</a>');
-        </script>
-      </li>
-      <li>
-        <span class="fa-li"><i class="fab fa-telegram-plane"></i></span>
-        <a href="https://t.me/blami85">blami85</a>
-      </li>
-    </ul>
-
-    <ul class="fa-ul mb-md-0">
-      <li>
-        <span class="fa-li"><i class="fas fa-key"></i></span>
-        <a href="/id_rsa.pub.txt">SSH pubkey</a>
-        (<a href="/id_rsa.fingerprint.txt">fingerprint</a>)
-      </li>
-      <li>
-        <span class="fa-li"><i class="fas fa-key"></i></span>
-        <a href="/pubkey.asc.txt">GnuPG pubkey</a>
-        (<a href="/pubkey.fingerprint.txt">fingerprint</a>)
-      </li>
-      <li>
-        <span class="fa-li"><i class="fas fa-hand-spock"></i></span>
-        <a href="/geekcode.asc.txt">Geek code</a>
-      </li>
-      <li>
-        <span class="fa-li"><i class="fas fa-brain"></i></span>
-        <a href="https://www.16personalities.com/intp-personality" title="Turbulent Logician">INTP-T</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="col-md col-12">
-    <h4>Recent Posts</h4>
-    <ul class="list-unstyled">
-    {% for post in site.posts limit:5 %}
-      <li>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %y" }}</time>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-    {% if site.posts == empty %}
-    There are no blog posts yet :(
-    {% endif %}
-    </ul>
-  </div>
-
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="me" href="https://mastodon.online/@blami" />
+    <title>blami.net</title>
+  </head>
+  <body>
+    I will have a proper web page one day...
+  </body>
+</html>
